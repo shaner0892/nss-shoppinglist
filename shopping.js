@@ -8,7 +8,7 @@ const items = [
     {
         id: 2,
         food: "eggs",
-        price: 4.99,
+        price: 2.99,
         refrigerated: true
     },
     {
@@ -19,4 +19,18 @@ const items = [
     }
 ]
 
-console.log(items)
+const bagOfApples = {
+    id: 4,
+    food: "bag of apples",
+    price: 9.99,
+    refrigerated: false
+}
+items.push(bagOfApples)
+
+for (const item of items) {
+    if (item.price > 8) {
+        console.log(`The ${item.food} costs $${item.price}. Do you really want it?`)
+    }
+}
+
+// console.log(items)
